@@ -1,0 +1,39 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  labels:
+    apps.tanzu.vmware.com/pipeline: jenkins-pipeline
+  name: developer-defined-jenkins-tekton-pipeline
+  namespace: dev
+spec:
+  params:
+  - name: source-url
+    type: string
+  - name: source-revision
+    type: string
+  - name: secret-name
+    type: string
+  - name: job-name
+    type: string
+  - name: job-params
+    type: string
+  results:
+  - description: ""
+    name: jenkins-job-url
+    value: $(tasks.jenkins-task.results.jenkins-job-url)
+  tasks:
+  - name: jenkins-task
+    params:
+    - name: source-url
+      value: $(params.source-url)
+    - name: source-revision
+      value: $(params.source-revision)
+    - name: secret-name
+      value: $(params.secret-name)
+    - name: job-name
+      value: $(params.job-name)
+    - name: job-params
+      value: $(params.job-params)
+    taskRef:
+      kind: ClusterTask
+      name: jenkins-task
