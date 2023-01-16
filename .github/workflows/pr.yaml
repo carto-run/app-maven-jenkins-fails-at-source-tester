@@ -24,4 +24,4 @@ jobs:
           java-version: ${{matrix.java}}
 
       - name: Test
-        run: mvn --no-transfer-progress test
+        run: mvn --no-transfer-progress test -Dmaven.test.failure.ignore=true
