@@ -16,7 +16,6 @@
 
   <properties>
     <java.version>11</java.version>
-    <jackson-bom.version>2.13.4</jackson-bom.version>
   </properties>
 
   <licenses>
@@ -71,6 +70,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>3.0.5</version>
         <configuration>
           <excludeDevtools>false</excludeDevtools>
         </configuration>
