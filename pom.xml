@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.7.10</version>
+    <version>3.0.5</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.example</groupId>
@@ -16,7 +16,6 @@
 
   <properties>
     <java.version>11</java.version>
-    <jackson-bom.version>2.13.4</jackson-bom.version>
   </properties>
 
   <licenses>
@@ -30,19 +29,19 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-      <version>2.7.10</version>
+      <version>3.0.5</version>
     </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
-      <version>2.7.10</version>
+      <version>3.0.5</version>
     </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
-      <version>2.7.10</version>
+      <version>3.0.5</version>
       <scope>test</scope>
     </dependency>
 
@@ -50,7 +49,7 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
-      <version>2.7.10</version>
+      <version>3.0.5</version>
       <optional>true</optional>
     </dependency>
   </dependencies>
@@ -71,6 +70,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>3.0.5</version>
         <configuration>
           <excludeDevtools>false</excludeDevtools>
         </configuration>
